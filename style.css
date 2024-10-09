@@ -1,0 +1,145 @@
+:root { 
+
+    --color-primary: #ab79d6; 
+
+    --color-secondary: #d367c1; 
+
+    --color-background: #27272c; 
+
+    --color-on-background: #c5c5ce; 
+
+    --color-gradient: linear-gradient(to right, #d367c1, #dedf40, #62cb5c, #00bbcb, #ab79d6); 
+
+    --highlight-gradient: linear-gradient(to right, #d367c1, #00bbcb); 
+
+    --brand-font: 'Kanit', serif; 
+
+    --brand-font-alt: 'Baloo 2', sans-serif; 
+
+} 
+
+ 
+
+body { 
+
+    background-color: var(--color-background); 
+
+    color: var(--color-on-background); 
+
+    font-family: var(--brand-font-alt); 
+
+    min-height: 100vh; 
+
+    margin: 0; 
+
+    padding: 0; 
+
+    display: flex; 
+
+    flex-direction: column; 
+
+} 
+
+ 
+
+.hero { 
+
+    text-align: center; 
+
+    padding: 20px; 
+
+    background: var(--color-gradient); 
+
+    color: var(--color-on-background); 
+
+    font-family: var(--brand-font); 
+
+    font-weight: 800; 
+
+} 
+
+ 
+
+.highlight-title { 
+
+    background: var(--highlight-gradient); 
+
+    -webkit-background-clip: text; 
+
+    -webkit-text-fill-color: transparent; 
+
+} 
+
+ 
+
+.byline { 
+
+    font-size: 1.2rem; 
+
+    margin-bottom: 20px; 
+
+} 
+
+ 
+
+a { 
+
+    color: var(--color-primary); 
+
+    text-decoration: none; 
+
+} 
+
+ 
+
+.button { 
+
+    display: inline-block; 
+
+    padding: 10px 20px; 
+
+    color: white; 
+
+    background-color: var(--color-secondary); 
+
+    border-radius: 5px; 
+
+    margin-top: 10px; 
+
+    font-size: 1rem; 
+
+} 
+
+ 
+
+.promo { 
+
+    text-align: center; 
+
+    background-color: #1e1c22; 
+
+    padding: 20px; 
+
+    margin: 20px 0; 
+
+    border: 3px solid transparent; 
+
+    border-image: var(--color-gradient) 1; 
+
+} 
+
+ 
+
+footer { 
+
+    background-color: #1e1c22; 
+
+    color: var(--color-on-background); 
+
+    padding: 10px; 
+
+    text-align: center; 
+
+    margin-top: auto; 
+
+} 
