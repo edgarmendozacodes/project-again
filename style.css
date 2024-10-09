@@ -1,144 +1,209 @@
-:root { 
-
-    --color-primary: #ab79d6; 
-
-    --color-secondary: #d367c1; 
-
-    --color-background: #27272c; 
-
-    --color-on-background: #c5c5ce; 
-
-    --color-gradient: linear-gradient(to right, #d367c1, #dedf40, #62cb5c, #00bbcb, #ab79d6); 
-
-    --highlight-gradient: linear-gradient(to right, #d367c1, #00bbcb); 
-
-    --brand-font: 'Kanit', serif; 
-
-    --brand-font-alt: 'Baloo 2', sans-serif; 
-
-} 
-
-
-body { 
-
-    background-color: var(--color-background); 
-
-    color: var(--color-on-background); 
-
-    font-family: var(--brand-font-alt); 
-
-    min-height: 100vh; 
-
-    margin: 0; 
-
-    padding: 0; 
-
-    display: flex; 
-
-    flex-direction: column; 
-
-} 
-
- 
-
-.hero { 
-
-    text-align: center; 
-
-    padding: 20px; 
-
-    background: var(--color-gradient); 
-
-    color: var(--color-on-background); 
-
-    font-family: var(--brand-font); 
-
-    font-weight: 800; 
-
-} 
-
- 
-
-.highlight-title { 
-
-    background: var(--highlight-gradient); 
-
-    -webkit-background-clip: text; 
-
-    -webkit-text-fill-color: transparent; 
-
-} 
-
- 
-
-.byline { 
-
-    font-size: 1.2rem; 
-
-    margin-bottom: 20px; 
-
-} 
-
- 
-
-a { 
-
-    color: var(--color-primary); 
-
-    text-decoration: none; 
-
-} 
-
- 
-
-.button { 
-
-    display: inline-block; 
-
-    padding: 10px 20px; 
-
-    color: white; 
-
-    background-color: var(--color-secondary); 
-
-    border-radius: 5px; 
-
-    margin-top: 10px; 
-
-    font-size: 1rem; 
-
-} 
-
- 
-
-.promo { 
-
-    text-align: center; 
-
-    background-color: #1e1c22; 
-
-    padding: 20px; 
-
-    margin: 20px 0; 
-
-    border: 3px solid transparent; 
-
-    border-image: var(--color-gradient) 1; 
-
-} 
-
- 
-
-footer { 
-
-    background-color: #1e1c22; 
-
-    color: var(--color-on-background); 
-
-    padding: 10px; 
-
-    text-align: center; 
-
-    margin-top: auto; 
-
-} 
+/* CSS Variables for Theme Colors and Fonts */
+:root {
+    --primary-color: #2D9CDB;
+    --secondary-color: #56CCF2;
+    --accent-color: #F2C94C;
+    --background-color: #F9F9F9;
+    --text-color: #333333;
+    --font-primary: 'Kanit', sans-serif;
+    --font-secondary: 'Baloo 2', cursive;
+    --max-width: 1200px;
+}
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-primary);
+    color: var(--text-color);
+    background-color: var(--background-color);
+    line-height: 1.6;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--secondary-color);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Header (Hero Section) */
+.hero {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: #fff;
+    padding: 100px 20px;
+    text-align: center;
+    position: relative;
+}
+
+.highlight-title {
+    font-family: var(--font-secondary);
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.highlight-title em {
+    font-weight: 400;
+    font-style: normal;
+    color: var(--accent-color);
+}
+
+.byline {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.button {
+    background-color: var(--accent-color);
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #e0a800;
+}
+
+/* Main Content */
+main {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 40px 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+}
+
+/* Sections */
+section {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    font-family: var(--font-secondary);
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+section p, section ul, section blockquote {
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+section ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+section ul li {
+    margin-bottom: 10px;
+}
+
+blockquote {
+    font-style: italic;
+    color: #555;
+    border-left: 4px solid var(--secondary-color);
+    padding-left: 15px;
+    margin: 10px 0;
+}
+
+/* Gallery */
+section img {
+    width: calc(50% - 10px);
+    margin: 5px;
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    section img {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+
+/* FAQ */
+section h3 {
+    font-size: 1.2rem;
+    margin-top: 20px;
+    color: var(--secondary-color);
+}
+
+/* Meet the Team */
+section div {
+    margin-top: 15px;
+}
+
+section div h3 {
+    font-size: 1.1rem;
+    color: var(--primary-color);
+}
+
+section div p {
+    font-size: 0.95rem;
+    color: #666;
+}
+
+/* Contact Section */
+section a {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+section a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+/* Responsive Layout for Main Content */
+@media (min-width: 768px) {
+    main {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Gallery Section */
+    section img {
+        width: calc(50% - 10px);
+    }
+}
+
+@media (min-width: 1024px) {
+    main {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* Adjust Gallery Images */
+    section img {
+        width: calc(33.333% - 10px);
+    }
+}
